@@ -2,29 +2,28 @@
     <xsd:element name="NationalParks">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element ref="NationalPark" maxOccurs="unbounded"/>
-            </xsd:sequence>
-        </xsd:complexType>
-    </xsd:element>
-    <xsd:element name="NationalPark">
-        <xsd:complexType>
-            <xsd:sequence>
-                <xsd:element name="Name" type="xsd:string"/>
-                <xsd:element name="Phone" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
-                <xsd:element name="Address">
+                <xsd:element name="NationalPark">
                     <xsd:complexType>
                         <xsd:sequence>
-                            <xsd:element name="Number" type="xsd:string"/>
-                            <xsd:element name="Street" type="xsd:string"/>
-                            <xsd:element name="City" type="xsd:string"/>
-                            <xsd:element name="State" type="xsd:string"/>
-                            <xsd:element name="Zip" type="xsd:string"/>
+                            <xsd:element name="Name" type="xsd:string"/>
+                            <xsd:element name="Phone" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
+                            <xsd:element name="Address">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="Number" type="xsd:string"/>
+                                        <xsd:element name="Street" type="xsd:string"/>
+                                        <xsd:element name="City" type="xsd:string"/>
+                                        <xsd:element name="State" type="xsd:string"/>
+                                        <xsd:element name="Zip" type="xsd:string"/>
+                                    </xsd:sequence>
+                                    <xsd:attribute name="NearestAirport" type="xsd:string" use="required"/>
+                                </xsd:complexType>
+                            </xsd:element>
                         </xsd:sequence>
-                        <xsd:attribute name="NearestAirport" type="xsd:string" use="required"/>
+                        <xsd:attribute name="Rating" type="xsd:string" use="optional"/>
                     </xsd:complexType>
                 </xsd:element>
             </xsd:sequence>
-            <xsd:attribute name="Rating" type="xsd:string" use="optional"/>
         </xsd:complexType>
     </xsd:element>
 </xsd:schema>
