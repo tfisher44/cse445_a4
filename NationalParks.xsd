@@ -2,11 +2,11 @@
     <xsd:element name="NationalParks">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="NationalPark">
+                <xsd:element name="NationalPark" maxOccurs="unbounded">
                     <xsd:complexType>
                         <xsd:sequence>
                             <xsd:element name="Name" type="xsd:string"/>
-                            <xsd:element name="Phone" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
+                            <xsd:element name="Phone" type="xsd:string" maxOccurs="unbounded"/>
                             <xsd:element name="Address">
                                 <xsd:complexType>
                                     <xsd:sequence>
